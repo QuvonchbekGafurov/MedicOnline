@@ -48,17 +48,15 @@ fun SignInorUp(navController: NavController) {
     ) {
         item {
            Box(modifier = Modifier
-                .fillMaxWidth().clickable{
-                   Log.e("TAG", "SignInorUp: Salom", )
-               }
+               .fillMaxWidth()
            ) {
                 Image(
                     painter = painterResource(id = R.drawable.back1),
                     contentDescription = "",
                     modifier = Modifier
-                        .size(35.dp)
+                        .size(30.dp)
                         .clickable {
-                            Log.e("TAG", "SignInorUp: Salom", )
+                            navController.navigate("main")
                         }
                         .zIndex(1f)
                     ,

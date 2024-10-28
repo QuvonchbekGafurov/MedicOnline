@@ -77,9 +77,9 @@ fun SignUp(navController: NavController){
                     painter = painterResource(id = R.drawable.back1),
                     contentDescription = "",
                     modifier = Modifier
-                        .size(25.dp)
+                        .size(30.dp)
                         .clickable {
-                            navController.popBackStack()
+                            navController.navigate("SignInorUp")
                         },
                     alignment = Alignment.CenterStart
                 )
@@ -98,7 +98,7 @@ fun SignUp(navController: NavController){
             OutlinedTextField(
                 value = adress,
                 onValueChange = { adress = it },
-                placeholder = { Text("Enter Your Location") },
+                placeholder = { Text("Enter Your email") },
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(15.dp),
                 textStyle = TextStyle(color = Color.Black),
@@ -163,6 +163,7 @@ fun SignUp(navController: NavController){
                     )
             )
             var isChecked by remember { mutableStateOf(false) }
+            Spacer(modifier = Modifier.height(20.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -192,7 +193,7 @@ fun SignUp(navController: NavController){
                     modifier = Modifier.padding(horizontal = 8.dp), // Matnni chiziqdan bir oz ajratish
                 )
             }
-            Spacer(modifier = Modifier.height(36.dp))
+            Spacer(modifier = Modifier.height(20.dp))
             Button(
                 onClick = {},
                 modifier = Modifier

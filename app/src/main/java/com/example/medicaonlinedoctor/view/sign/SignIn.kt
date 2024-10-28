@@ -73,7 +73,7 @@ fun SignIn(navController: NavController){
                     painter = painterResource(id = R.drawable.back1),
                     contentDescription = "",
                     modifier = Modifier
-                        .size(25.dp)
+                        .size(30.dp)
                         .clickable {
                             navController.navigate("SignInorUp")
                         },
@@ -94,7 +94,7 @@ fun SignIn(navController: NavController){
             OutlinedTextField(
                 value = adress,
                 onValueChange = { adress = it },
-                placeholder = { Text("Enter Your Location") },
+                placeholder = { Text("Enter Your email") },
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(15.dp),
                 textStyle = TextStyle(color = Color.Black),
@@ -158,7 +158,7 @@ fun SignIn(navController: NavController){
 
                     )
             )
-            Spacer(modifier = Modifier.height(36.dp))
+            Spacer(modifier = Modifier.height(20.dp))
             Button(
                 onClick = {},
                 modifier = Modifier

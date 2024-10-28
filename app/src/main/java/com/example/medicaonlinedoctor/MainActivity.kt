@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import com.example.medicaonlinedoctor.ui.theme.MedicaOnlineDoctorTheme
 import com.example.medicaonlinedoctor.view.splash_viewpager.IntroScreen
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
@@ -26,6 +27,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     val systemUi = rememberSystemUiController()
                     systemUi.setStatusBarColor(Color.Transparent)
+                    Spacer(modifier = Modifier.padding(top=20.dp))
                     AppNavigator()
                 }
             }
